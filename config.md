@@ -1,3 +1,5 @@
+https://devdactic.com/nextjs-and-capacitor
+
 npx create-next-app name-project
 
 new action command and image configuration nextjs {
@@ -30,5 +32,25 @@ new action command and image configuration nextjs {
     "url": 'http://192.168.x.xx:3000', // localhost
     "cleartext": true
   }
+
+  add => yarn add @capacitor/share
+
+  index.tsx => {
+    import { Share } from '@capacitor/share';
+
+    const share = async () => {
+      await Share.share({
+        title: 'Felipe DEV UX Software',
+        text: 'Felipe tá desenvolvendo uns app massa!!!',
+        url: 'https://www.instagram.com/felipe_barros._/',
+        dialogTitle: 'Compartilhar com amigos',
+      });
+    };
+  }
+
+  add => yarn add @ionic/react
+  add => yarn add ionicons
+
+
 
 }
